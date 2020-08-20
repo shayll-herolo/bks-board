@@ -1,16 +1,3 @@
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-//----- Override Angular Material styles
-
-.mat-loading .mat-button-wrapper {
-  visibility: hidden;
-}
-
-.mat-loading .mat-progress-spinner {
-  position: absolute;
-  top: calc(50% - 10px);
-  left: calc(50% - 10px);
-}
+@import "assets/styles/layout";
+@import "assets/styles/material";
+@import "assets/styles/variables";

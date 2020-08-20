@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { CoreModule } from '@core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { BoardComponent } from './board/board.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { BoardComponent } from './board/board.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
