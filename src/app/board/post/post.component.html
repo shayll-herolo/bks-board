@@ -1,1 +1,12 @@
-<p>post works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ post.author }}</mat-card-title>
+        <mat-card-subtitle>{{ post.date | date }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content><p>{{ post.content |truncate }}</p></mat-card-content>
+    <mat-card-actions fxLayoutAlign="end end">
+        <button (click)="deletePost()" mat-icon-button color="accent" aria-label="Remove">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+    </mat-card-actions>
+</mat-card>

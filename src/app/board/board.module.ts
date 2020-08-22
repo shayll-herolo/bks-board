@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { BoardComponent } from './board.component';
 import { PostComponent } from './post/post.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
+import { BoardService } from './services';
 
 const routes: Routes = [
   {path: '', component: BoardComponent}
@@ -11,6 +12,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [BoardComponent, PostComponent],
+  providers: [BoardService],
   imports: [
     CommonModule,
     SharedModule,

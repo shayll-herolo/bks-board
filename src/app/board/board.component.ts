@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BoardService } from './services';
+import { Post } from '@core/models';
 
 @Component({
   selector: 'app-board',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
+  posts: Post[]
 
-  constructor() { }
+  constructor(private boardService: BoardService) { }
 
   ngOnInit(): void {
+    this.boardService.getPosts().subscribe(
+      res => this.posts = res
+    )
   }
 
 }
