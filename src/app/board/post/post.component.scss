@@ -6,6 +6,10 @@ mat-card {
     justify-content: space-between;
     cursor: pointer;
 
+    mat-card-content {
+        white-space: break-spaces;
+    }
+
     mat-card-actions {
         align-self: flex-end;
     }
