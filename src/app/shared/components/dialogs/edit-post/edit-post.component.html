@@ -1,0 +1,48 @@
+<form [formGroup]="form" (ngSubmit)="updateForm()">
+  <div mat-mat-dialog-title>
+    <h3 *ngIf="data.isEdit">Created On: {{ data.date | date }}</h3>
+    <h3 *ngIf="!data.isEdit">Add New Post</h3>
+  </div>
+  <div mat-dialog-conent>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Author Name"
+        formControlName="author"
+        required
+      />
+      <mat-error *ngIf="form.get('author').hasError('required')">
+        Author name is required
+      </mat-error>
+      <mat-error *ngIf="form.get('author').hasError('alpha')">
+        Author name must have English letters only
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea
+        matInput
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"
+        placeholder="Post Description"
+        formControlName="content"
+        required
+      ></textarea>
+      <mat-error *ngIf="form.get('content').hasError('required')">
+        Description is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-flat-button mat-dialog-close>Cancel</button>
+    <button
+      mat-flat-button
+      type="submit"
+      [disabled]="form.pristine || form.invalid"
+      color="primary"
+    >
+      Save
+    </button>
+  </div>
+</form>

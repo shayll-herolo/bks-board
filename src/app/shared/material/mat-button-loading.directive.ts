@@ -14,6 +14,7 @@ import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { ThemePalette } from '@angular/material/core';
 
 @Directive({
+  /* tslint:disable-next-line */
   selector: `
     button[mat-button][loading],
     button[mat-raised-button][loading],

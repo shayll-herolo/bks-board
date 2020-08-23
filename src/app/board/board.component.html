@@ -1,8 +1,13 @@
 <app-header></app-header>
 <div class="board">
     <div fxLayout="row wrap" fxLayoutGap="1rem grid">
-        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let post of posts">
-            <app-post [post]="post"></app-post>
+        <div *ngIf="!posts.length; else postsList">
+            <h2>The board is empty</h2>
         </div>
+        <ng-template #postsList>
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let post of posts">
+                <app-post class="board__post" [post]="post"></app-post>
+            </div>
+        </ng-template>
     </div>
 </div>

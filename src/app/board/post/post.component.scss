@@ -1,0 +1,14 @@
+mat-card {
+    min-height: inherit;
+    max-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    mat-card-actions {
+        align-self: flex-end;
+    }
+
+    
+}
