@@ -35,7 +35,6 @@ export class AuthService {
     logout() {
         // remove user and posts from local storage to log user out
         localStorage.removeItem('user');
-        localStorage.removeItem('posts');
         this.userSubject.next(null);
         this.router.navigate(['login']);
     }

@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   }
 
   logoClick() {
-    console.log('clicked');
     this.router.navigate(['']);
   }
 
